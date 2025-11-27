@@ -31,7 +31,7 @@ def createaccount():
     return render_template('createaccount.html', form=register_form)
 
 
-@app.route('/profile/<username>')
+@app.route('/profile/<user_id>')
 @login_required
 def profile(user_id):
     if int(user_id) == int(current_user.id):
